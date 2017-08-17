@@ -5,14 +5,13 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
 var articleOne = {
     title: 'Article one! Digambar Shinde'
     heading: 'Article one'
     date: 'August 17, 2017'
     content: '                                                                                                              <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>'
 };
-function creatTemplate (data) {
+function createTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;

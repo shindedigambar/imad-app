@@ -6,19 +6,22 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne = {
-    title: 'Article one! Digambar Shinde'
-    heading: 'Article one'
-    date: 'August 17, 2017'
-    content: '                                                                                                              <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>'
+    title: 'Article one! Digambar Shinde',
+    heading: 'Article one',
+    date: 'August 17, 2017',
+    content: `                                                                                                              <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>                                                                                                               <p>                                                                                                                     This is a practicle session of Introduction to modern applicatio development. This is a practicle session of         Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development. This is a practicle session of Introduction to modern applicatio development. This         is a practicle session of Introduction to modern applicatio development. This is a practicle session of            Introduction to modern applicatio development. This is a practicle session of Introduction to modern               applicatio development.                                                                                     </p>`
 };
+
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    
-    var htmlTemplate = '                                                                                                <html>
-            <head>
+}
+
+var htmlTemplate = `
+<html>
+        <head>
             <title>
                 ${title}
             </title>
@@ -37,15 +40,16 @@ function createTemplate (data) {
             <div>
                 ${date}
             </div>
-                <div>
-                    ${content}
-                </div>
-            </body>
-            </div>
-    </html>
-    ';
-    return htmlTemplate;
+            <div>
+                ${content}
+            </div  
+        </div>
+    </body>
+</html>   
+`;                                                                                                              
+return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
